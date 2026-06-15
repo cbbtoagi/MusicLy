@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Mac App Store build. App Sandbox is mandatory.
+         Build this variant WITHOUT the ENABLE_OCR flag (screen capture is not
+         permitted under the sandbox). -->
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+
+    <!-- Fetch synced lyrics from LRCLIB -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+
+    <!-- Read Apple Music playback state via Apple Events -->
+    <key>com.apple.security.automation.apple-events</key>
+    <true/>
+
+    <!-- Sandbox requires explicitly whitelisting the scripting target.
+         This is a "temporary exception" entitlement and is reviewed manually
+         by App Review; document the use clearly in the review notes. -->
+    <key>com.apple.security.temporary-exception.apple-events</key>
+    <array>
+        <string>com.apple.Music</string>
+    </array>
+</dict>
+</plist>

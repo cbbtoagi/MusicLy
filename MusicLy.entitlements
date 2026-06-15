@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Direct distribution (GitHub Release / DMG). NOT sandboxed.
+         These entitlements only take effect once the app is signed with a real
+         Developer ID certificate + hardened runtime (for notarization). With
+         ad-hoc signing they are advisory. -->
+    <key>com.apple.security.automation.apple-events</key>
+    <true/>
+</dict>
+</plist>
